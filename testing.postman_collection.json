@@ -1,0 +1,59 @@
+{
+	"info": {
+		"_postman_id": "cb6aee27-d7dc-49fb-a032-0bea987ce55d",
+		"name": "testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24071174"
+	},
+	"item": [
+		{
+			"name": "1. Obtener usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/obtener-usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"obtener-usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"correo1@ejemplo.com\",\r\n    \"contraseña\": \"1234567ñÑ*\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/crear-usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"crear-usuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
