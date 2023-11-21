@@ -39,6 +39,8 @@ describe('1. Test de Correo ya registrado', function () {
       response = await request(app)
         .post('/crear-usuario')
         .send({ correo: correoTest1, contraseña: contraseñaTest1 })
+      expect(response.body.estado).to.be.a('string')
+      expect(response.body).to.have.property('estado')
       expect(response.status).to.equal(400)
       expect(response.body).to.deep.equal({ estado: 'error', mensaje: 'El correo electrónico ya está registrado' })
       console.log('Correo enviado: ', correoTest1)
